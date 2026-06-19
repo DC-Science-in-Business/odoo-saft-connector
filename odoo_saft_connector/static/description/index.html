@@ -1,89 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8"/>
-<style>
-  body { font-family: "Segoe UI", Arial, sans-serif; color: #1a1a1a; background: #fff; margin: 0; padding: 0; }
-  .wrap { max-width: 800px; padding: 20px; }
-  h1 { font-size: 24px; margin: 0 0 6px; }
-  .sub { color: #555; font-size: 15px; margin: 0 0 16px; }
-  .badge { display: inline-block; background: #1E1E1E; color: #FEC86D; border-radius: 4px; padding: 3px 10px; font-size: 12px; font-weight: 700; margin-bottom: 20px; }
-  h2 { font-size: 15px; font-weight: 700; margin: 20px 0 8px; border-bottom: 2px solid #FEC86D; padding-bottom: 3px; display: inline-block; }
-  ul { margin: 0 0 14px 18px; padding: 0; }
-  li { margin-bottom: 5px; font-size: 14px; line-height: 1.5; }
-  .kpis { margin: 0 0 14px 0; }
-  .kpi { display: inline-block; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; padding: 3px 9px; font-size: 13px; margin: 0 4px 4px 0; }
-  .steps { margin: 0 0 14px 0; padding: 0; list-style: none; counter-reset: s; }
-  .steps li { counter-increment: s; margin-bottom: 8px; padding-left: 28px; position: relative; font-size: 14px; line-height: 1.5; }
-  .steps li::before { content: counter(s); position: absolute; left: 0; top: 1px; background: #FEC86D; color: #1E1E1E; font-weight: 700; border-radius: 50%; width: 19px; height: 19px; line-height: 19px; text-align: center; font-size: 11px; }
-  .note { background: #f9f9f9; border-left: 3px solid #FEC86D; padding: 10px 14px; font-size: 13px; color: #444; margin-bottom: 14px; }
-  table { border-collapse: collapse; width: 100%; margin-bottom: 8px; font-size: 13px; }
-  th { background: #1E1E1E; color: #FEC86D; padding: 7px 10px; text-align: left; }
-  td { padding: 6px 10px; border-bottom: 1px solid #eee; }
-  .footer { margin-top: 18px; font-size: 12px; color: #888; }
-  .footer a { color: #639922; }
-</style>
-</head>
-<body>
-<div class="wrap">
+<head><meta charset="utf-8"/></head>
+<body style="font-family:'Segoe UI',Arial,sans-serif;color:#1a1a1a;background:#fff;margin:0;padding:0;">
+<div style="max-width:800px;padding:20px;">
 
-  <h1>SAF-T Analyser</h1>
-  <p class="sub">Upload Portuguese SAF-T XML files in Odoo and get executive KPIs with a premium HTML report — without leaving Odoo.</p>
-  <span class="badge">Powered by D&amp;C Science in Business</span>
+  <p style="font-size:22px;font-weight:700;margin:0 0 4px;">SAF-T Analyser</p>
+  <p style="font-size:14px;color:#555;margin:0 0 12px;">Upload Portuguese SAF-T XML files in Odoo and get executive KPIs with a premium HTML report — without leaving Odoo.</p>
+  <span style="display:inline-block;background:#1E1E1E;color:#FEC86D;border-radius:4px;padding:3px 10px;font-size:11px;font-weight:700;margin-bottom:20px;">Powered by D&amp;C Science in Business</span>
 
   <br/><br/>
-  <h2>What it does</h2>
-  <ul>
-    <li>Upload SAF-T XML files directly from Odoo — no external steps required.</li>
-    <li>Executive KPIs calculated instantly by the D&amp;C analysis engine.</li>
-    <li>Premium HTML management report saved as an Odoo attachment.</li>
-    <li>Full history of analyses per company, accessible any time.</li>
-    <li>Configure the API once in Settings — any user can then run analyses.</li>
+  <p style="font-size:14px;font-weight:700;margin:0 0 6px;border-bottom:2px solid #FEC86D;padding-bottom:3px;">What it does</p>
+  <ul style="margin:0 0 14px 18px;padding:0;">
+    <li style="margin-bottom:4px;font-size:13px;line-height:1.5;">Upload SAF-T XML files directly from Odoo — no external steps required.</li>
+    <li style="margin-bottom:4px;font-size:13px;line-height:1.5;">Executive KPIs calculated instantly by the D&amp;C analysis engine.</li>
+    <li style="margin-bottom:4px;font-size:13px;line-height:1.5;">Premium HTML management report saved as an Odoo attachment.</li>
+    <li style="margin-bottom:4px;font-size:13px;line-height:1.5;">Full history of analyses per company, accessible any time.</li>
+    <li style="margin-bottom:4px;font-size:13px;line-height:1.5;">Configure the API once in Settings — any user can then run analyses.</li>
   </ul>
 
-  <h2>KPIs included</h2>
-  <div class="kpis">
-    <span class="kpi">Total Revenue (€)</span>
-    <span class="kpi">Average Ticket (€)</span>
-    <span class="kpi">Estimated VAT (€)</span>
-    <span class="kpi">Return Rate (%)</span>
-    <span class="kpi">Customer Concentration (%)</span>
-    <span class="kpi">Top Revenue Product</span>
-    <span class="kpi">Top Revenue Customer</span>
-  </div>
+  <p style="font-size:14px;font-weight:700;margin:0 0 8px;border-bottom:2px solid #FEC86D;padding-bottom:3px;">KPIs included</p>
+  <p style="margin:0 0 14px;">
+    <span style="display:inline-block;background:#f5f5f5;border:1px solid #ddd;border-radius:4px;padding:3px 9px;font-size:12px;margin:0 4px 6px 0;">Total Revenue (€)</span>
+    <span style="display:inline-block;background:#f5f5f5;border:1px solid #ddd;border-radius:4px;padding:3px 9px;font-size:12px;margin:0 4px 6px 0;">Average Ticket (€)</span>
+    <span style="display:inline-block;background:#f5f5f5;border:1px solid #ddd;border-radius:4px;padding:3px 9px;font-size:12px;margin:0 4px 6px 0;">Estimated VAT (€)</span>
+    <span style="display:inline-block;background:#f5f5f5;border:1px solid #ddd;border-radius:4px;padding:3px 9px;font-size:12px;margin:0 4px 6px 0;">Return Rate (%)</span>
+    <span style="display:inline-block;background:#f5f5f5;border:1px solid #ddd;border-radius:4px;padding:3px 9px;font-size:12px;margin:0 4px 6px 0;">Customer Concentration (%)</span>
+    <span style="display:inline-block;background:#f5f5f5;border:1px solid #ddd;border-radius:4px;padding:3px 9px;font-size:12px;margin:0 4px 6px 0;">Top Revenue Product</span>
+    <span style="display:inline-block;background:#f5f5f5;border:1px solid #ddd;border-radius:4px;padding:3px 9px;font-size:12px;margin:0 4px 6px 0;">Top Revenue Customer</span>
+  </p>
 
-  <h2>How to use</h2>
-  <ol class="steps">
-    <li><strong>Configure in Settings:</strong> Settings → SAF-T Analyser → fill in API URL, Tenant ID and API Key. Click "Test Connection".</li>
-    <li><strong>Export your SAF-T:</strong> export the XML from your accounting software (PHC, Sage, Primavera, Moloni, Jasmin, etc.).</li>
-    <li><strong>New Analysis:</strong> Accounting → SAF-T Analyses → New Analysis → upload the XML.</li>
-    <li><strong>View results:</strong> KPIs appear on the record. Click "Open HTML Report" for the full report.</li>
-  </ol>
-
-  <h2>Pricing</h2>
-  <table>
-    <tr><th>Plan</th><th>Price</th><th>Monthly analyses</th></tr>
-    <tr><td>Standard</td><td>€19.99/month</td><td>20</td></tr>
-    <tr><td><strong>Growth</strong></td><td><strong>€49.99/month</strong></td><td><strong>50 (free trial included)</strong></td></tr>
-    <tr><td>Pro</td><td>€79.99/month</td><td>100</td></tr>
+  <p style="font-size:14px;font-weight:700;margin:0 0 8px;border-bottom:2px solid #FEC86D;padding-bottom:3px;">How to use</p>
+  <table style="border-collapse:collapse;margin-bottom:14px;">
+    <tr>
+      <td style="vertical-align:top;padding:4px 10px 4px 0;"><span style="display:inline-block;background:#FEC86D;color:#1E1E1E;font-weight:700;border-radius:50%;width:20px;height:20px;line-height:20px;text-align:center;font-size:11px;">1</span></td>
+      <td style="vertical-align:top;padding:4px 0;font-size:13px;line-height:1.5;"><strong>Configure in Settings:</strong> Settings → SAF-T Analyser → fill in API URL, Tenant ID and API Key. Click "Test Connection".</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top;padding:4px 10px 4px 0;"><span style="display:inline-block;background:#FEC86D;color:#1E1E1E;font-weight:700;border-radius:50%;width:20px;height:20px;line-height:20px;text-align:center;font-size:11px;">2</span></td>
+      <td style="vertical-align:top;padding:4px 0;font-size:13px;line-height:1.5;"><strong>Export your SAF-T:</strong> export the XML from your accounting software (PHC, Sage, Primavera, Moloni, Jasmin, etc.).</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top;padding:4px 10px 4px 0;"><span style="display:inline-block;background:#FEC86D;color:#1E1E1E;font-weight:700;border-radius:50%;width:20px;height:20px;line-height:20px;text-align:center;font-size:11px;">3</span></td>
+      <td style="vertical-align:top;padding:4px 0;font-size:13px;line-height:1.5;"><strong>New Analysis:</strong> Accounting → SAF-T Analyses → New Analysis → upload the XML file.</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top;padding:4px 10px 4px 0;"><span style="display:inline-block;background:#FEC86D;color:#1E1E1E;font-weight:700;border-radius:50%;width:20px;height:20px;line-height:20px;text-align:center;font-size:11px;">4</span></td>
+      <td style="vertical-align:top;padding:4px 0;font-size:13px;line-height:1.5;"><strong>View results:</strong> KPIs appear on the record. Click "Open HTML Report" for the full report in a new tab.</td>
+    </tr>
   </table>
-  <p style="font-size:12px;color:#888">Subscription at factiviz.sciencebusiness.pt — Tenant ID and API Key provided after subscribing.</p>
 
-  <h2>Privacy &amp; security</h2>
-  <div class="note">
+  <p style="font-size:14px;font-weight:700;margin:0 0 8px;border-bottom:2px solid #FEC86D;padding-bottom:3px;">Pricing</p>
+  <table style="border-collapse:collapse;width:100%;margin-bottom:8px;font-size:13px;">
+    <tr>
+      <td style="padding:7px 12px;background:#1E1E1E;color:#FEC86D;font-weight:700;">Plan</td>
+      <td style="padding:7px 12px;background:#1E1E1E;color:#FEC86D;font-weight:700;">Price</td>
+      <td style="padding:7px 12px;background:#1E1E1E;color:#FEC86D;font-weight:700;">Monthly analyses</td>
+    </tr>
+    <tr>
+      <td style="padding:6px 12px;border-bottom:1px solid #eee;">Standard</td>
+      <td style="padding:6px 12px;border-bottom:1px solid #eee;">€19.99/month</td>
+      <td style="padding:6px 12px;border-bottom:1px solid #eee;">20</td>
+    </tr>
+    <tr style="background:#fffbf0;">
+      <td style="padding:6px 12px;border-bottom:1px solid #eee;font-weight:700;">Growth</td>
+      <td style="padding:6px 12px;border-bottom:1px solid #eee;font-weight:700;">€49.99/month</td>
+      <td style="padding:6px 12px;border-bottom:1px solid #eee;font-weight:700;">50 (free trial included)</td>
+    </tr>
+    <tr>
+      <td style="padding:6px 12px;">Pro</td>
+      <td style="padding:6px 12px;">€79.99/month</td>
+      <td style="padding:6px 12px;">100</td>
+    </tr>
+  </table>
+  <p style="font-size:11px;color:#888;margin:0 0 16px;">Subscription at factiviz.sciencebusiness.pt — Tenant ID and API Key provided after subscribing.</p>
+
+  <p style="font-size:14px;font-weight:700;margin:0 0 8px;border-bottom:2px solid #FEC86D;padding-bottom:3px;">Privacy &amp; security</p>
+  <div style="background:#f9f9f9;border-left:3px solid #FEC86D;padding:10px 14px;font-size:13px;color:#444;margin-bottom:16px;">
     The analysis engine runs on D&amp;C servers over HTTPS. <strong>No copy of the original XML is stored</strong> — only the resulting KPIs and HTML report are returned to Odoo.
   </div>
 
-  <h2>Compatibility</h2>
-  <ul>
-    <li>Odoo 16 — On Premise and Odoo.sh</li>
-    <li>Portuguese SAF-T PT format (Autoridade Tributária)</li>
-    <li>Requires: Accounting (account), Discuss (mail)</li>
-    <li>License: OPL-1</li>
+  <p style="font-size:14px;font-weight:700;margin:0 0 8px;border-bottom:2px solid #FEC86D;padding-bottom:3px;">Compatibility</p>
+  <ul style="margin:0 0 14px 18px;padding:0;">
+    <li style="margin-bottom:4px;font-size:13px;">Odoo 16 — On Premise and Odoo.sh</li>
+    <li style="margin-bottom:4px;font-size:13px;">Portuguese SAF-T PT format (Autoridade Tributária)</li>
+    <li style="margin-bottom:4px;font-size:13px;">Requires: Accounting (account), Discuss (mail)</li>
+    <li style="margin-bottom:4px;font-size:13px;">License: OPL-1</li>
   </ul>
 
-  <p class="footer">
-    D&amp;C Science in Business &middot; <a href="https://sciencebusiness.pt">sciencebusiness.pt</a> &middot; <a href="mailto:consulting@sciencebusiness.pt">consulting@sciencebusiness.pt</a>
+  <p style="font-size:11px;color:#888;margin-top:16px;">
+    D&amp;C Science in Business &middot; <a href="https://sciencebusiness.pt" style="color:#639922;">sciencebusiness.pt</a> &middot; <a href="mailto:consulting@sciencebusiness.pt" style="color:#639922;">consulting@sciencebusiness.pt</a>
   </p>
 
 </div>
