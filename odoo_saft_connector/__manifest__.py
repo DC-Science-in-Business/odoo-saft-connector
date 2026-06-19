@@ -3,7 +3,7 @@
     'name': 'SAF-T Analyser by D&C Science in Business',
     'version': '16.0.1.0.0',
     'category': 'Accounting/Accounting',
-    'summary': 'Analise ficheiros SAF-T e obtenha KPIs estratégicos e relatórios HTML diretamente no Odoo.',
+    'summary': 'Analyse Portuguese SAF-T files and get executive KPIs — revenue, returns, customer concentration — with a premium HTML report, directly in Odoo.',
     'description': """
 SAF-T Analyser - D&C Science in Business
 ==========================================
