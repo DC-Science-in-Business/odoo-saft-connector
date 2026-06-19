@@ -1,182 +1,91 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #1E1E1E; margin: 0; padding: 0; background: #fff; }
-    .hero { background: #1E1E1E; color: #F2F2F3; padding: 48px 40px; display: flex; align-items: center; gap: 32px; }
-    .hero img { width: 80px; height: 80px; border-radius: 12px; }
-    .hero h1 { font-size: 2rem; font-weight: 700; margin: 0 0 8px; }
-    .hero p { font-size: 1.1rem; color: #FEC86D; margin: 0; font-weight: 500; }
-    .section { padding: 40px; border-bottom: 1px solid #F2F2F3; max-width: 860px; margin: 0 auto; }
-    h2 { font-size: 1.25rem; font-weight: 700; margin: 0 0 16px; color: #1E1E1E; }
-    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 8px; }
-    .feature { background: #F2F2F3; border-radius: 10px; padding: 20px; }
-    .feature .icon { font-size: 1.6rem; margin-bottom: 8px; }
-    .feature h3 { font-size: 0.95rem; font-weight: 700; margin: 0 0 6px; }
-    .feature p { font-size: 0.88rem; color: #555; margin: 0; line-height: 1.5; }
-    .steps { list-style: none; padding: 0; margin: 0; counter-reset: step; }
-    .steps li { counter-increment: step; display: flex; gap: 16px; margin-bottom: 20px; align-items: flex-start; }
-    .steps li::before { content: counter(step); background: #FEC86D; color: #1E1E1E; font-weight: 700; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 0.85rem; }
-    .steps li div strong { display: block; margin-bottom: 4px; font-size: 0.95rem; }
-    .steps li div span { font-size: 0.87rem; color: #555; line-height: 1.5; }
-    .kpi-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
-    .kpi-badge { background: #1E1E1E; color: #FEC86D; border-radius: 6px; padding: 6px 14px; font-size: 0.85rem; font-weight: 600; }
-    .pricing { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-top: 8px; }
-    .plan { border: 2px solid #F2F2F3; border-radius: 10px; padding: 20px; text-align: center; }
-    .plan.highlight { border-color: #FEC86D; }
-    .plan .name { font-weight: 700; font-size: 1rem; margin-bottom: 4px; }
-    .plan .price { font-size: 1.5rem; font-weight: 800; color: #1E1E1E; }
-    .plan .quota { font-size: 0.82rem; color: #777; margin-top: 4px; }
-    .privacy { background: #F2F2F3; border-left: 4px solid #FEC86D; padding: 16px 20px; border-radius: 0 8px 8px 0; font-size: 0.9rem; color: #444; line-height: 1.6; margin-top: 8px; }
-    .footer { padding: 32px 40px; text-align: center; font-size: 0.85rem; color: #888; }
-    .footer a { color: #639922; text-decoration: none; }
-  </style>
+<meta charset="utf-8"/>
+<style>
+  body { font-family: "Segoe UI", Arial, sans-serif; color: #1a1a1a; background: #fff; margin: 0; padding: 0; }
+  .wrap { max-width: 800px; padding: 20px; }
+  h1 { font-size: 24px; margin: 0 0 6px; }
+  .sub { color: #555; font-size: 15px; margin: 0 0 16px; }
+  .badge { display: inline-block; background: #1E1E1E; color: #FEC86D; border-radius: 4px; padding: 3px 10px; font-size: 12px; font-weight: 700; margin-bottom: 20px; }
+  h2 { font-size: 15px; font-weight: 700; margin: 20px 0 8px; border-bottom: 2px solid #FEC86D; padding-bottom: 3px; display: inline-block; }
+  ul { margin: 0 0 14px 18px; padding: 0; }
+  li { margin-bottom: 5px; font-size: 14px; line-height: 1.5; }
+  .kpis { margin: 0 0 14px 0; }
+  .kpi { display: inline-block; background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; padding: 3px 9px; font-size: 13px; margin: 0 4px 4px 0; }
+  .steps { margin: 0 0 14px 0; padding: 0; list-style: none; counter-reset: s; }
+  .steps li { counter-increment: s; margin-bottom: 8px; padding-left: 28px; position: relative; font-size: 14px; line-height: 1.5; }
+  .steps li::before { content: counter(s); position: absolute; left: 0; top: 1px; background: #FEC86D; color: #1E1E1E; font-weight: 700; border-radius: 50%; width: 19px; height: 19px; line-height: 19px; text-align: center; font-size: 11px; }
+  .note { background: #f9f9f9; border-left: 3px solid #FEC86D; padding: 10px 14px; font-size: 13px; color: #444; margin-bottom: 14px; }
+  table { border-collapse: collapse; width: 100%; margin-bottom: 8px; font-size: 13px; }
+  th { background: #1E1E1E; color: #FEC86D; padding: 7px 10px; text-align: left; }
+  td { padding: 6px 10px; border-bottom: 1px solid #eee; }
+  .footer { margin-top: 18px; font-size: 12px; color: #888; }
+  .footer a { color: #639922; }
+</style>
 </head>
 <body>
+<div class="wrap">
 
-<div class="hero">
-  <img src="icon.png" alt="Factiviz"/>
-  <div>
-    <h1>SAF-T Analyser — Factiviz</h1>
-    <p>Análise de ficheiros SAF-T com KPIs executivos, directamente no Odoo.</p>
+  <h1>SAF-T Analyser</h1>
+  <p class="sub">Upload Portuguese SAF-T XML files in Odoo and get executive KPIs with a premium HTML report — without leaving Odoo.</p>
+  <span class="badge">Powered by D&amp;C Science in Business</span>
+
+  <br/><br/>
+  <h2>What it does</h2>
+  <ul>
+    <li>Upload SAF-T XML files directly from Odoo — no external steps required.</li>
+    <li>Executive KPIs calculated instantly by the D&amp;C analysis engine.</li>
+    <li>Premium HTML management report saved as an Odoo attachment.</li>
+    <li>Full history of analyses per company, accessible any time.</li>
+    <li>Configure the API once in Settings — any user can then run analyses.</li>
+  </ul>
+
+  <h2>KPIs included</h2>
+  <div class="kpis">
+    <span class="kpi">Total Revenue (€)</span>
+    <span class="kpi">Average Ticket (€)</span>
+    <span class="kpi">Estimated VAT (€)</span>
+    <span class="kpi">Return Rate (%)</span>
+    <span class="kpi">Customer Concentration (%)</span>
+    <span class="kpi">Top Revenue Product</span>
+    <span class="kpi">Top Revenue Customer</span>
   </div>
-</div>
 
-<div class="section">
-  <h2>O que faz este módulo</h2>
-  <p style="color:#555; line-height:1.7; margin:0 0 24px">
-    O <strong>SAF-T Analyser by D&amp;C Science in Business</strong> conecta o Odoo ao motor de análise Factiviz.
-    Carregue qualquer ficheiro SAF-T (XML) exportado do vosso software de contabilidade e obtenha
-    em segundos KPIs financeiros estruturados e um relatório HTML completo — sem sair do Odoo.
-  </p>
-  <div class="feature-grid">
-    <div class="feature">
-      <div class="icon">📤</div>
-      <h3>Upload directo no Odoo</h3>
-      <p>Wizard integrado em Contabilidade. Carregue o XML e obtenha resultados sem mudar de aplicação.</p>
-    </div>
-    <div class="feature">
-      <div class="icon">📊</div>
-      <h3>KPIs executivos</h3>
-      <p>Faturação total, ticket médio, taxa de devoluções, concentração de clientes, IVA estimado.</p>
-    </div>
-    <div class="feature">
-      <div class="icon">📄</div>
-      <h3>Relatório HTML premium</h3>
-      <p>Relatório visual guardado como anexo no registo. Partilhável e abrível em qualquer browser.</p>
-    </div>
-    <div class="feature">
-      <div class="icon">🏢</div>
-      <h3>Histórico por empresa</h3>
-      <p>Cada análise fica registada em <em>Análises SAF-T</em> com todos os KPIs e o relatório associado.</p>
-    </div>
-    <div class="feature">
-      <div class="icon">🔌</div>
-      <h3>Configuração simples</h3>
-      <p>URL, Tenant ID e API Key em Definições. Botão "Testar Ligação" confirma a configuração.</p>
-    </div>
-    <div class="feature">
-      <div class="icon">🔒</div>
-      <h3>Dados seguros</h3>
-      <p>O motor analítico corre nos servidores D&amp;C. O ficheiro original não é armazenado.</p>
-    </div>
-  </div>
-</div>
-
-<div class="section">
-  <h2>KPIs disponíveis</h2>
-  <div class="kpi-row">
-    <span class="kpi-badge">Faturação Total (€)</span>
-    <span class="kpi-badge">Ticket Médio (€)</span>
-    <span class="kpi-badge">IVA Estimado (€)</span>
-    <span class="kpi-badge">Taxa de Devoluções (%)</span>
-    <span class="kpi-badge">Concentração de Clientes (%)</span>
-    <span class="kpi-badge">Produto #1 por Faturação</span>
-    <span class="kpi-badge">Cliente #1 por Faturação</span>
-  </div>
-</div>
-
-<div class="section">
-  <h2>Como funciona</h2>
+  <h2>How to use</h2>
   <ol class="steps">
-    <li>
-      <div>
-        <strong>Configure a API em Definições</strong>
-        <span>Vá a Definições → SAF-T Analyser. Introduza a URL da API, o Tenant ID e a API Key fornecidos pela D&amp;C. Clique "Testar Ligação" para confirmar.</span>
-      </div>
-    </li>
-    <li>
-      <div>
-        <strong>Exporte o SAF-T do vosso software de contabilidade</strong>
-        <span>Qualquer ficheiro SAF-T XML válido (PHC, Sage, Primavera, Moloni, Jasmin, etc.) é compatível.</span>
-      </div>
-    </li>
-    <li>
-      <div>
-        <strong>Clique em "Nova Análise"</strong>
-        <span>No menu Contabilidade → Análises SAF-T → Nova Análise. Carregue o ficheiro XML e seleccione o tier (opcional).</span>
-      </div>
-    </li>
-    <li>
-      <div>
-        <strong>Consulte os KPIs e abra o relatório</strong>
-        <span>Em segundos, o registo é criado com todos os KPIs visíveis. O botão "Abrir Relatório HTML" abre o relatório detalhado num separador.</span>
-      </div>
-    </li>
+    <li><strong>Configure in Settings:</strong> Settings → SAF-T Analyser → fill in API URL, Tenant ID and API Key. Click "Test Connection".</li>
+    <li><strong>Export your SAF-T:</strong> export the XML from your accounting software (PHC, Sage, Primavera, Moloni, Jasmin, etc.).</li>
+    <li><strong>New Analysis:</strong> Accounting → SAF-T Analyses → New Analysis → upload the XML.</li>
+    <li><strong>View results:</strong> KPIs appear on the record. Click "Open HTML Report" for the full report.</li>
   </ol>
-</div>
 
-<div class="section">
-  <h2>Planos e preços</h2>
-  <div class="pricing">
-    <div class="plan">
-      <div class="name">Standard</div>
-      <div class="price">€19,99<span style="font-size:0.7em;font-weight:400">/mês</span></div>
-      <div class="quota">20 análises/mês</div>
-    </div>
-    <div class="plan highlight">
-      <div class="name">Growth</div>
-      <div class="price">€49,99<span style="font-size:0.7em;font-weight:400">/mês</span></div>
-      <div class="quota">50 análises/mês · Trial grátis</div>
-    </div>
-    <div class="plan">
-      <div class="name">Pro</div>
-      <div class="price">€79,99<span style="font-size:0.7em;font-weight:400">/mês</span></div>
-      <div class="quota">100 análises/mês</div>
-    </div>
+  <h2>Pricing</h2>
+  <table>
+    <tr><th>Plan</th><th>Price</th><th>Monthly analyses</th></tr>
+    <tr><td>Standard</td><td>€19.99/month</td><td>20</td></tr>
+    <tr><td><strong>Growth</strong></td><td><strong>€49.99/month</strong></td><td><strong>50 (free trial included)</strong></td></tr>
+    <tr><td>Pro</td><td>€79.99/month</td><td>100</td></tr>
+  </table>
+  <p style="font-size:12px;color:#888">Subscription at factiviz.sciencebusiness.pt — Tenant ID and API Key provided after subscribing.</p>
+
+  <h2>Privacy &amp; security</h2>
+  <div class="note">
+    The analysis engine runs on D&amp;C servers over HTTPS. <strong>No copy of the original XML is stored</strong> — only the resulting KPIs and HTML report are returned to Odoo.
   </div>
-  <p style="font-size:0.83rem;color:#888;margin-top:12px">
-    Subscrição gerida em <a href="https://factiviz.sciencebusiness.pt" style="color:#639922">factiviz.sciencebusiness.pt</a>.
-    Tenant ID e API Key fornecidos após subscrição.
+
+  <h2>Compatibility</h2>
+  <ul>
+    <li>Odoo 16 — On Premise and Odoo.sh</li>
+    <li>Portuguese SAF-T PT format (Autoridade Tributária)</li>
+    <li>Requires: Accounting (account), Discuss (mail)</li>
+    <li>License: OPL-1</li>
+  </ul>
+
+  <p class="footer">
+    D&amp;C Science in Business &middot; <a href="https://sciencebusiness.pt">sciencebusiness.pt</a> &middot; <a href="mailto:consulting@sciencebusiness.pt">consulting@sciencebusiness.pt</a>
   </p>
-</div>
 
-<div class="section">
-  <h2>Privacidade e segurança</h2>
-  <div class="privacy">
-    O motor de análise SAF-T corre exclusivamente nos servidores D&amp;C em ambiente seguro.
-    <strong>Nenhuma cópia do ficheiro XML original é armazenada</strong> — apenas os KPIs calculados e o relatório HTML resultante são devolvidos ao Odoo.
-    A comunicação é feita via HTTPS com autenticação por Tenant ID + API Key.
-  </div>
 </div>
-
-<div class="section">
-  <h2>Compatibilidade</h2>
-  <p style="color:#555;font-size:0.9rem;line-height:1.7;margin:0">
-    ✅ Odoo 16, 17, 18 &nbsp;·&nbsp;
-    ✅ Licença OPL-1 &nbsp;·&nbsp;
-    ✅ Dependências: <code>base</code>, <code>account</code>, <code>mail</code> &nbsp;·&nbsp;
-    ✅ Ficheiros SAF-T PT (AT) e SAF-T genérico
-  </p>
-</div>
-
-<div class="footer">
-  Desenvolvido por <a href="https://sciencebusiness.pt">D&amp;C Science in Business</a> ·
-  Suporte: <a href="mailto:consulting@sciencebusiness.pt">consulting@sciencebusiness.pt</a> ·
-  <a href="https://factiviz.sciencebusiness.pt">factiviz.sciencebusiness.pt</a>
-</div>
-
 </body>
 </html>
