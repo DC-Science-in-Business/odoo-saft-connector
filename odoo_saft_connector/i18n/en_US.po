@@ -1,0 +1,393 @@
+# Translation of saft_connector to English (United States)
+# Copyright (C) 2026 D&C Science in Business
+# License: OPL-1
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: saft_connector 4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-13 00:00+0000\n"
+"PO-Revision-Date: 2026-03-13 00:00+0000\n"
+"Last-Translator: D&C Science in Business\n"
+"Language-Team: English <en@li.org>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# ---------------------------------------------------------------------------
+# Model: saft.report
+# ---------------------------------------------------------------------------
+
+#. model: saft.report / _description
+msgid "Análise SAF-T"
+msgstr "SAF-T Analysis"
+
+#. model_terms: saft.report / field:name / string
+msgid "Referência"
+msgstr "Reference"
+
+#. model_terms: saft.report / field:file_name / string
+msgid "Ficheiro"
+msgstr "File"
+
+#. model_terms: saft.report / field:company_id / string
+msgid "Empresa"
+msgstr "Company"
+
+#. model_terms: saft.report / field:status / string
+msgid "Estado"
+msgstr "Status"
+
+#. model_terms: saft.report / field:status / selection:done
+msgid "Concluído"
+msgstr "Completed"
+
+#. model_terms: saft.report / field:status / selection:failed
+msgid "Falhou"
+msgstr "Failed"
+
+#. model_terms: saft.report / field:period_start / string
+msgid "Início do Período"
+msgstr "Period Start"
+
+#. model_terms: saft.report / field:period_end / string
+msgid "Fim do Período"
+msgstr "Period End"
+
+#. model_terms: saft.report / field:rows / string
+msgid "Documentos Processados"
+msgstr "Processed Documents"
+
+#. model_terms: saft.report / field:kpi_faturacao_total / string
+msgid "Faturação Total (€)"
+msgstr "Total Revenue (€)"
+
+#. model_terms: saft.report / field:kpi_ticket_medio / string
+msgid "Ticket Médio (€)"
+msgstr "Average Ticket (€)"
+
+#. model_terms: saft.report / field:kpi_taxa_devolucoes / string
+msgid "Taxa Devoluções (%)"
+msgstr "Return Rate (%)"
+
+#. model_terms: saft.report / field:kpi_concentracao_clientes / string
+msgid "Concentração Clientes (%)"
+msgstr "Customer Concentration (%)"
+
+#. model_terms: saft.report / field:kpi_produto_top1 / string
+msgid "Produto #1"
+msgstr "Top Product"
+
+#. model_terms: saft.report / field:kpi_cliente_top1 / string
+msgid "Cliente #1"
+msgstr "Top Customer"
+
+#. model_terms: saft.report / field:kpi_iva_estimado / string
+msgid "IVA Estimado (€)"
+msgstr "Estimated VAT (€)"
+
+#. model_terms: saft.report / field:report_html_attachment_id / string
+msgid "Relatório HTML"
+msgstr "HTML Report"
+
+#. model_terms: saft.report / field:report_download_url / string
+msgid "URL de Download"
+msgstr "Download URL"
+
+#. saft_report.py: action_open_report — notification title
+msgid "Relatório"
+msgstr "Report"
+
+#. saft_report.py: action_open_report — notification message
+msgid "Relatório HTML ainda não disponível."
+msgstr "HTML report not yet available."
+
+#. saft_report.py: action_new_analysis — button label reused
+msgid "Nova Análise"
+msgstr "New Analysis"
+
+# ---------------------------------------------------------------------------
+# Model: res.config.settings (SAF-T extension)
+# ---------------------------------------------------------------------------
+
+#. model_terms: res.config.settings / field:saft_api_url / string
+msgid "URL da API SAF-T"
+msgstr "SAF-T API URL"
+
+#. model_terms: res.config.settings / field:saft_api_url / help
+msgid "Endereço do servidor da API SAF-T (ex: https://api.saft.sciencebusiness.pt)"
+msgstr "SAF-T API server address (e.g. https://api.saft.sciencebusiness.pt)"
+
+#. model_terms: res.config.settings / field:saft_tenant_id / help
+msgid "Identificador único da vossa licença. Obtido no portal D&C."
+msgstr "Unique identifier for your licence. Obtained from the D&C portal."
+
+#. model_terms: res.config.settings / field:saft_api_key / help
+msgid "Chave secreta da API. Trate como password – não partilhe."
+msgstr "Secret API key. Treat as a password – do not share."
+
+#. model_terms: res.config.settings / field:saft_default_tier / string
+msgid "Tier Padrão"
+msgstr "Default Tier"
+
+#. model_terms: res.config.settings / field:saft_default_tier / help
+msgid "Tier a usar quando o upload não especifica explicitamente."
+msgstr "Tier to use when upload does not explicitly specify one."
+
+#. res_config_settings.py: action_test — warning message
+msgid "Preencha a URL da API antes de testar."
+msgstr "Please fill in the API URL before testing."
+
+# ---------------------------------------------------------------------------
+# Model: saft.upload.wizard
+# ---------------------------------------------------------------------------
+
+#. model: saft.upload.wizard / _description
+msgid "Upload e Análise de SAF-T"
+msgstr "SAF-T Upload & Analysis"
+
+#. model_terms: saft.upload.wizard / field:saft_file / string
+msgid "Ficheiro SAF-T (XML)"
+msgstr "SAF-T File (XML)"
+
+#. model_terms: saft.upload.wizard / field:saft_file / help
+msgid "Exporte o ficheiro SAF-T do vosso software de contabilidade (extensão .xml)."
+msgstr "Export the SAF-T file from your accounting software (.xml extension)."
+
+#. model_terms: saft.upload.wizard / field:file_name / string
+msgid "Nome do ficheiro"
+msgstr "File name"
+
+#. model_terms: saft.upload.wizard / field:requested_tier / string
+msgid "Tier Solicitado"
+msgstr "Requested Tier"
+
+#. model_terms: saft.upload.wizard / field:requested_tier / help
+msgid "Deixe em branco para usar o tier da subscrição contratada."
+msgstr "Leave blank to use the contracted subscription tier."
+
+#. saft_upload_wizard.py: _get_api_credentials — UserError
+msgid ""
+"O módulo Python \"requests\" não está instalado no servidor Odoo."
+msgstr ""
+"The Python \"requests\" module is not installed on the Odoo server."
+
+#. saft_upload_wizard.py: _get_api_credentials — UserError (multi-line)
+msgid ""
+"A API SAF-T não está configurada.\n"
+"Vá a Configurações > SAF-T Analyser e preencha URL, Tenant ID e API Key."
+msgstr ""
+"The SAF-T API is not configured.\n"
+"Go to Settings > SAF-T Analyser and fill in the URL, Tenant ID and API Key."
+
+#. saft_upload_wizard.py: action_analyse — ConnectionError
+msgid ""
+"Não foi possível conectar à API SAF-T.\n"
+"Verifique a URL em Configurações e a conectividade de rede."
+msgstr ""
+"Could not connect to the SAF-T API.\n"
+"Check the URL in Settings and your network connectivity."
+
+#. saft_upload_wizard.py: action_analyse — Timeout
+msgid ""
+"Timeout ao processar o ficheiro SAF-T.\n"
+"Tente com um ficheiro mais pequeno ou contacte o suporte."
+msgstr ""
+"Timeout while processing the SAF-T file.\n"
+"Try with a smaller file or contact support."
+
+#. saft_upload_wizard.py: action_analyse — HTTPError on submit (format string)
+msgid "Erro da API SAF-T ao submeter: %s"
+msgstr "SAF-T API error on submit: %s"
+
+#. saft_upload_wizard.py: action_analyse — missing job_id
+msgid "A API não devolveu um job_id válido."
+msgstr "The API did not return a valid job_id."
+
+#. saft_upload_wizard.py: action_analyse — KPI HTTPError (format string)
+msgid "Erro ao obter KPIs: %s"
+msgstr "Error fetching KPIs: %s"
+
+#. saft_upload_wizard.py: action_analyse — KPI unexpected error (format string)
+msgid "Erro inesperado ao obter KPIs: %s"
+msgstr "Unexpected error fetching KPIs: %s"
+
+# ---------------------------------------------------------------------------
+# Views — menus.xml
+# ---------------------------------------------------------------------------
+
+#. menus.xml: menu_saft_reports
+msgid "Análises"
+msgstr "Analyses"
+
+#. menus.xml: menu_saft_report_list
+msgid "Histórico de Análises"
+msgstr "Analysis History"
+
+#. menus.xml: menu_saft_new_analysis / menu_saft_upload_wizard action name
+msgid "Nova Análise"
+msgstr "New Analysis"
+
+#. menus.xml: menu_saft_config
+msgid "Configuração"
+msgstr "Configuration"
+
+#. menus.xml: menu_saft_config_settings
+msgid "Definições da API"
+msgstr "API Settings"
+
+# ---------------------------------------------------------------------------
+# Views — saft_report_views.xml
+# ---------------------------------------------------------------------------
+
+#. saft_report_views.xml: form string / tree string / action name
+msgid "Análises SAF-T"
+msgstr "SAF-T Analyses"
+
+#. saft_report_views.xml: open report button
+msgid "📄 Abrir Relatório HTML"
+msgstr "📄 Open HTML Report"
+
+#. saft_report_views.xml: new analysis button
+msgid "➕ Nova Análise"
+msgstr "➕ New Analysis"
+
+#. saft_report_views.xml: group label Identification
+msgid "Identificação"
+msgstr "Identification"
+
+#. saft_report_views.xml: group label Period
+msgid "Período e Processamento"
+msgstr "Period & Processing"
+
+#. saft_report_views.xml: field string override for duration
+msgid "Duração de Processamento (ms)"
+msgstr "Processing Duration (ms)"
+
+#. saft_report_views.xml: KPI section heading
+msgid "📊 KPIs Executivos"
+msgstr "📊 Executive KPIs"
+
+#. saft_report_views.xml: KPI card labels
+msgid "Faturação Total"
+msgstr "Total Revenue"
+
+msgid "Ticket Médio"
+msgstr "Average Ticket"
+
+msgid "IVA Estimado"
+msgstr "Estimated VAT"
+
+msgid "Taxa Devoluções"
+msgstr "Return Rate"
+
+msgid "Concentração Clientes"
+msgstr "Customer Concentration"
+
+#. saft_report_views.xml: group label Highlights
+msgid "Destaques"
+msgstr "Highlights"
+
+#. saft_report_views.xml: field string overrides in Highlights group
+msgid "Produto com Maior Faturação"
+msgstr "Top Revenue Product"
+
+msgid "Cliente com Maior Faturação"
+msgstr "Top Revenue Customer"
+
+#. saft_report_views.xml: tree column overrides
+msgid "Faturação (€)"
+msgstr "Revenue (€)"
+
+#. saft_report_views.xml: tree button title
+msgid "Abrir Relatório HTML"
+msgstr "Open HTML Report"
+
+#. saft_report_views.xml: empty state message
+msgid "Ainda não há análises SAF-T."
+msgstr "No SAF-T analyses yet."
+
+msgid "Clique em <strong>Nova Análise</strong> para carregar o vosso ficheiro SAF-T."
+msgstr "Click <strong>New Analysis</strong> to upload your SAF-T file."
+
+# ---------------------------------------------------------------------------
+# Views — saft_upload_wizard_views.xml
+# ---------------------------------------------------------------------------
+
+#. saft_upload_wizard_views.xml: form string
+msgid "Analisar SAF-T"
+msgstr "Analyse SAF-T"
+
+#. saft_upload_wizard_views.xml: h2 heading
+msgid "🕵️ Analisar Ficheiro SAF-T"
+msgstr "🕵️ Analyse SAF-T File"
+
+#. saft_upload_wizard_views.xml: description paragraph
+msgid ""
+"Carregue o ficheiro SAF-T exportado do vosso software de contabilidade.\n"
+"                        O motor D&C irá processar e devolver KPIs e relatório completo."
+msgstr ""
+"Upload the SAF-T file exported from your accounting software.\n"
+"                        The D&C engine will process it and return KPIs and a full report."
+
+#. saft_upload_wizard_views.xml: tier field string override
+msgid "Tier de Análise"
+msgstr "Analysis Tier"
+
+#. saft_upload_wizard_views.xml: tier field help override
+msgid "Deixe em branco para usar o tier configurado na subscrição."
+msgstr "Leave blank to use the tier configured in the subscription."
+
+#. saft_upload_wizard_views.xml: privacy notice label
+msgid "ℹ️ Nota de privacidade:"
+msgstr "ℹ️ Privacy notice:"
+
+#. saft_upload_wizard_views.xml: privacy notice body
+msgid ""
+"O ficheiro é processado de forma segura nos servidores D&C.\n"
+"                        Não é guardada nenhuma cópia do ficheiro original."
+msgstr ""
+"The file is processed securely on D&C servers.\n"
+"                        No copy of the original file is stored."
+
+#. saft_upload_wizard_views.xml: analyse button
+msgid "🚀 Analisar SAF-T"
+msgstr "🚀 Analyse SAF-T"
+
+#. saft_upload_wizard_views.xml: cancel button
+msgid "Cancelar"
+msgstr "Cancel"
+
+#. saft_upload_wizard_views.xml: action name
+msgid "Nova Análise SAF-T"
+msgstr "New SAF-T Analysis"
+
+# ---------------------------------------------------------------------------
+# Views — res_config_settings_views.xml
+# ---------------------------------------------------------------------------
+
+#. res_config_settings_views.xml: field label SAF-T API URL
+msgid "URL da API SAF-T"
+msgstr "SAF-T API URL"
+
+#. res_config_settings_views.xml: description SAF-T API URL
+msgid "Endereço do servidor de análise D&C."
+msgstr "D&C analysis server address."
+
+#. res_config_settings_views.xml: field label Tenant ID description
+msgid "Identificador único da licença. Obtido no portal D&C."
+msgstr "Unique licence identifier. Obtained from the D&C portal."
+
+#. res_config_settings_views.xml: field label API Key description
+msgid "Chave secreta da API. Não partilhe com terceiros."
+msgstr "Secret API key. Do not share with third parties."
+
+#. res_config_settings_views.xml: field label Default Tier description
+msgid "Nível de análise aplicado quando não é especificado no upload."
+msgstr "Analysis level applied when not specified on upload."
+
+#. res_config_settings_views.xml: test connection button
+msgid "🔌 Testar Ligação à API"
+msgstr "🔌 Test API Connection"

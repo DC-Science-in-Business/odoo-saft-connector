@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_saft_report_user,saft.report user,model_saft_report,base.group_user,1,0,0,0
+access_saft_report_manager,saft.report manager,model_saft_report,base.group_system,1,1,1,1
+access_saft_upload_wizard_user,saft.upload.wizard user,model_saft_upload_wizard,base.group_user,1,1,1,1

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ======================================================
+         FORM VIEW — Relatório SAF-T
+    ====================================================== -->
+    <record id="view_saft_report_form" model="ir.ui.view">
+        <field name="name">saft.report.form</field>
+        <field name="model">saft.report</field>
+        <field name="arch" type="xml">
+            <form string="Análise SAF-T" create="false" edit="false">
+                <header>
+                    <button name="action_open_report"
+                            type="object"
+                            string="📄 Abrir Relatório HTML"
+                            class="btn-primary"
+                            attrs="{'invisible': [('report_html_attachment_id', '=', False)]}"/>
+                    <button name="action_new_analysis"
+                            type="object"
+                            string="➕ Nova Análise"
+                            class="btn-secondary"/>
+                    <field name="status" widget="statusbar" statusbar_visible="done,failed"/>
+                </header>
+
+                <sheet>
+                    <!-- Titulo e metadados -->
+                    <div class="oe_title">
+                        <h1><field name="name" readonly="1"/></h1>
+                    </div>
+
+                    <group>
+                        <group string="Identificação">
+                            <field name="file_name" readonly="1"/>
+                            <field name="tier" readonly="1"/>
+                            <field name="job_id" readonly="1"/>
+                            <field name="company_id" readonly="1" groups="base.group_multi_company"/>
+                        </group>
+                        <group string="Período e Processamento">
+                            <field name="period_start" readonly="1"/>
+                            <field name="period_end" readonly="1"/>
+                            <field name="rows" readonly="1"/>
+                            <field name="duration_ms" readonly="1" string="Duração de Processamento (ms)"/>
+                        </group>
+                    </group>
+
+                    <!-- KPI Cards -->
+                    <div class="o_field_widget o_section_and_note_field_widget">
+                        <h3 class="mt16 mb8" style="color:#1e40af;">📊 KPIs Executivos</h3>
+                    </div>
+
+                    <div class="alert mt8"
+                         role="alert"
+                         attrs="{'invisible': [('tier', '!=', 't2')] }"
+                         style="background:#fff8e1;border:1px solid #f6ad55;color:#7a4b00;">
+                        <strong>Premium:</strong> análise avançada com foco em detalhe operacional.
+                    </div>
+
+                    <div class="alert mt8"
+                         role="alert"
+                         attrs="{'invisible': [('tier', '!=', 't3')] }"
+                         style="background:linear-gradient(90deg,#0f172a,#1e293b);border:1px solid #334155;color:#f8fafc;">
+                        <strong>Enterprise:</strong> relatório executivo para decisão estratégica e governance.
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card border-0 shadow-sm p-3 mb-3"
+                                 style="border-left:4px solid #3182ce!important;">
+                                <div class="text-muted small">Faturação Total</div>
+                                <h4 class="mb-0">
+                                    <field name="kpi_faturacao_total"
+                                           widget="monetary"
+                                           readonly="1"/>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card border-0 shadow-sm p-3 mb-3"
+                                 style="border-left:4px solid #38a169!important;">
+                                <div class="text-muted small">Ticket Médio</div>
+                                <h4 class="mb-0">
+                                    <field name="kpi_ticket_medio"
+                                           widget="monetary"
+                                           readonly="1"/>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card border-0 shadow-sm p-3 mb-3"
+                                 style="border-left:4px solid #6366f1!important;">
+                                <div class="text-muted small">IVA Estimado</div>
+                                <h4 class="mb-0">
+                                    <field name="kpi_iva_estimado"
+                                           widget="monetary"
+                                           readonly="1"/>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card border-0 shadow-sm p-3 mb-3"
+                                 style="border-left:4px solid #e53e3e!important;">
+                                <div class="text-muted small">Taxa Devoluções</div>
+                                <h4 class="mb-0">
+                                    <field name="kpi_taxa_devolucoes" readonly="1"/> %
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card border-0 shadow-sm p-3 mb-3"
+                                 style="border-left:4px solid #f6ad55!important;">
+                                <div class="text-muted small">Concentração Clientes</div>
+                                <h4 class="mb-0">
+                                    <field name="kpi_concentracao_clientes" readonly="1"/> %
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="card border-0 shadow-sm p-3 mb-3"
+                                 style="border-left:4px solid #805ad5!important;">
+                                <div class="text-muted small">Documentos Processados</div>
+                                <h4 class="mb-0">
+                                    <field name="rows" readonly="1"/>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <group string="Destaques">
+                        <field name="kpi_produto_top1" readonly="1" string="Produto com Maior Faturação"/>
+                        <field name="kpi_cliente_top1" readonly="1" string="Cliente com Maior Faturação"/>
+                    </group>
+
+                    <!-- Chatter -->
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ======================================================
+         TREE VIEW — Lista de análises
+    ====================================================== -->
+    <record id="view_saft_report_tree" model="ir.ui.view">
+        <field name="name">saft.report.tree</field>
+        <field name="model">saft.report</field>
+        <field name="arch" type="xml">
+            <tree string="Análises SAF-T" create="false" decoration-danger="status == 'failed'">
+                <field name="name"/>
+                <field name="file_name"/>
+                <field name="period_start"/>
+                <field name="period_end"/>
+                <field name="tier" widget="badge"
+                      decoration-warning="tier == 't2'"
+                      decoration-primary="tier == 't3'"/>
+                <field name="kpi_faturacao_total" widget="monetary" string="Faturação (€)"/>
+                <field name="rows" string="Docs."/>
+                <field name="status" widget="badge"
+                       decoration-success="status == 'done'"
+                       decoration-danger="status == 'failed'"/>
+                <field name="create_date" string="Data"/>
+                <button name="action_open_report"
+                        type="object"
+                        icon="fa-file-text-o"
+                        title="Abrir Relatório HTML"
+                        attrs="{'invisible': [('report_html_attachment_id', '=', False)]}"/>
+                <field name="report_html_attachment_id" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- ======================================================
+         ACTION — Abrir lista de análises
+    ====================================================== -->
+    <record id="action_saft_report" model="ir.actions.act_window">
+        <field name="name">Análises SAF-T</field>
+        <field name="res_model">saft.report</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Ainda não há análises SAF-T.
+            </p>
+            <p>
+                Clique em <strong>Nova Análise</strong> para carregar o vosso ficheiro SAF-T.
+            </p>
+        </field>
+    </record>
+
+</odoo>

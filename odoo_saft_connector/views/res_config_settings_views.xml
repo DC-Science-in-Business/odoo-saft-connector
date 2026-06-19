@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_saft" model="ir.ui.view">
+        <field name="name">res.config.settings.view.saft</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority">100</field>
+        <field name="inherit_id" ref="base_setup.action_general_configuration"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('o_settings_container')]" position="inside">
+                <div class="app_settings_block" data-string="SAF-T Analyser" string="SAF-T Analyser" data-key="saft_connector">
+                    <h2>SAF-T Analyser — D&amp;C Science in Business</h2>
+                    <div class="row mt16 o_settings_container">
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">URL da API SAF-T</span>
+                                <div class="text-muted">
+                                    Endereço do servidor de análise D&amp;C.
+                                </div>
+                                <div class="content-group mt8">
+                                    <field name="saft_api_url"
+                                           placeholder="https://api.saft.sciencebusiness.pt"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Tenant ID</span>
+                                <div class="text-muted">
+                                    Identificador único da licença. Obtido no portal D&amp;C.
+                                </div>
+                                <div class="content-group mt8">
+                                    <field name="saft_tenant_id" placeholder="ex: minha-empresa"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">API Key</span>
+                                <div class="text-muted">
+                                    Chave secreta da API. Não partilhe com terceiros.
+                                </div>
+                                <div class="content-group mt8">
+                                    <field name="saft_api_key"
+                                           password="True"
+                                           placeholder="···················"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Tier Padrão</span>
+                                <div class="text-muted">
+                                    Nível de análise aplicado quando não é especificado no upload.
+                                </div>
+                                <div class="content-group mt8">
+                                    <field name="saft_default_tier"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 o_setting_box">
+                            <div class="o_setting_left_pane"/>
+                            <div class="o_setting_right_pane">
+                                <button name="action_test_saft_connection"
+                                        type="object"
+                                        class="btn btn-secondary mt8">
+                                    🔌 Testar Ligação à API
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

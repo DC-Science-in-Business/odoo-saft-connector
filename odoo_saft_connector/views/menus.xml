@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Menu raiz: aparece no topo da barra de aplicações -->
+    <menuitem id="menu_saft_root"
+              name="SAF-T Analyser"
+              sequence="95"
+              web_icon="saft_connector,static/description/icon.png"
+              groups="base.group_user"/>
+
+    <!-- Nível 1: Análises -->
+    <menuitem id="menu_saft_reports"
+              name="Análises"
+              parent="menu_saft_root"
+              sequence="10"
+              groups="base.group_user"/>
+
+    <menuitem id="menu_saft_report_list"
+              name="Histórico de Análises"
+              parent="menu_saft_reports"
+              action="action_saft_report"
+              sequence="10"
+              groups="base.group_user"/>
+
+    <menuitem id="menu_saft_new_analysis"
+              name="Nova Análise"
+              parent="menu_saft_reports"
+              action="action_saft_upload_wizard"
+              sequence="5"
+              groups="base.group_user"/>
+
+    <!-- Nível 1: Configuração (só admins) -->
+    <menuitem id="menu_saft_config"
+              name="Configuração"
+              parent="menu_saft_root"
+              sequence="90"
+              groups="base.group_system"/>
+
+    <menuitem id="menu_saft_config_settings"
+              name="Definições da API"
+              parent="menu_saft_config"
+              action="base_setup.action_general_configuration"
+              sequence="10"
+              groups="base.group_system"/>
+</odoo>

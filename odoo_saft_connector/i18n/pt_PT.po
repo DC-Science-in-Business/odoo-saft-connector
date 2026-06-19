@@ -1,0 +1,310 @@
+# Translation of saft_connector to Portuguese (Portugal)
+# Copyright (C) 2026 D&C Science in Business
+# License: OPL-1
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: saft_connector 4.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-19 00:00+0000\n"
+"PO-Revision-Date: 2026-06-19 00:00+0000\n"
+"Last-Translator: D&C Science in Business\n"
+"Language-Team: Portuguese <pt@li.org>\n"
+"Language: pt_PT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# ---------------------------------------------------------------------------
+# Model: saft.report
+# ---------------------------------------------------------------------------
+
+msgid "Análise SAF-T"
+msgstr "Análise SAF-T"
+
+msgid "Referência"
+msgstr "Referência"
+
+msgid "Ficheiro"
+msgstr "Ficheiro"
+
+msgid "Empresa"
+msgstr "Empresa"
+
+msgid "Estado"
+msgstr "Estado"
+
+msgid "Concluído"
+msgstr "Concluído"
+
+msgid "Falhou"
+msgstr "Falhou"
+
+msgid "Início do Período"
+msgstr "Início do Período"
+
+msgid "Fim do Período"
+msgstr "Fim do Período"
+
+msgid "Documentos Processados"
+msgstr "Documentos Processados"
+
+msgid "Faturação Total (€)"
+msgstr "Faturação Total (€)"
+
+msgid "Ticket Médio (€)"
+msgstr "Ticket Médio (€)"
+
+msgid "Taxa Devoluções (%)"
+msgstr "Taxa de Devoluções (%)"
+
+msgid "Concentração Clientes (%)"
+msgstr "Concentração de Clientes (%)"
+
+msgid "Produto #1"
+msgstr "Produto #1"
+
+msgid "Cliente #1"
+msgstr "Cliente #1"
+
+msgid "IVA Estimado (€)"
+msgstr "IVA Estimado (€)"
+
+msgid "Relatório HTML"
+msgstr "Relatório HTML"
+
+msgid "URL de Download"
+msgstr "URL de Download"
+
+msgid "Relatório"
+msgstr "Relatório"
+
+msgid "Relatório HTML ainda não disponível."
+msgstr "Relatório HTML ainda não disponível."
+
+msgid "Nova Análise"
+msgstr "Nova Análise"
+
+# ---------------------------------------------------------------------------
+# Model: res.config.settings
+# ---------------------------------------------------------------------------
+
+msgid "URL da API SAF-T"
+msgstr "URL da API SAF-T"
+
+msgid "Endereço do servidor da API SAF-T (ex: https://api.saft.sciencebusiness.pt)"
+msgstr "Endereço do servidor da API SAF-T (ex: https://api.saft.sciencebusiness.pt)"
+
+msgid "Identificador único da vossa licença. Obtido no portal D&C."
+msgstr "Identificador único da vossa licença. Obtido no portal D&C."
+
+msgid "Chave secreta da API. Trate como password – não partilhe."
+msgstr "Chave secreta da API. Trate como password — não partilhe."
+
+msgid "Tier Padrão"
+msgstr "Tier Predefinido"
+
+msgid "Tier a usar quando o upload não especifica explicitamente."
+msgstr "Tier a usar quando o upload não especifica explicitamente."
+
+msgid "Preencha a URL da API antes de testar."
+msgstr "Preencha o URL da API antes de testar."
+
+# ---------------------------------------------------------------------------
+# Model: saft.upload.wizard
+# ---------------------------------------------------------------------------
+
+msgid "Upload e Análise de SAF-T"
+msgstr "Upload e Análise de SAF-T"
+
+msgid "Ficheiro SAF-T (XML)"
+msgstr "Ficheiro SAF-T (XML)"
+
+msgid "Exporte o ficheiro SAF-T do vosso software de contabilidade (extensão .xml)."
+msgstr "Exporte o ficheiro SAF-T do vosso software de contabilidade (extensão .xml)."
+
+msgid "Nome do ficheiro"
+msgstr "Nome do ficheiro"
+
+msgid "Tier Solicitado"
+msgstr "Tier Solicitado"
+
+msgid "Deixe em branco para usar o tier da subscrição contratada."
+msgstr "Deixe em branco para usar o tier da subscrição contratada."
+
+msgid ""
+"O módulo Python \"requests\" não está instalado no servidor Odoo."
+msgstr ""
+"O módulo Python \"requests\" não está instalado no servidor Odoo."
+
+msgid ""
+"A API SAF-T não está configurada.\n"
+"Vá a Configurações > SAF-T Analyser e preencha URL, Tenant ID e API Key."
+msgstr ""
+"A API SAF-T não está configurada.\n"
+"Vá a Definições > SAF-T Analyser e preencha o URL, Tenant ID e API Key."
+
+msgid ""
+"Não foi possível conectar à API SAF-T.\n"
+"Verifique a URL em Configurações e a conectividade de rede."
+msgstr ""
+"Não foi possível ligar à API SAF-T.\n"
+"Verifique o URL em Definições e a conectividade de rede."
+
+msgid ""
+"Timeout ao processar o ficheiro SAF-T.\n"
+"Tente com um ficheiro mais pequeno ou contacte o suporte."
+msgstr ""
+"Tempo limite excedido ao processar o ficheiro SAF-T.\n"
+"Tente com um ficheiro mais pequeno ou contacte o suporte."
+
+msgid "Erro da API SAF-T ao submeter: %s"
+msgstr "Erro da API SAF-T ao submeter: %s"
+
+msgid "A API não devolveu um job_id válido."
+msgstr "A API não devolveu um job_id válido."
+
+msgid "Erro ao obter KPIs: %s"
+msgstr "Erro ao obter KPIs: %s"
+
+msgid "Erro inesperado ao obter KPIs: %s"
+msgstr "Erro inesperado ao obter KPIs: %s"
+
+# ---------------------------------------------------------------------------
+# Views — menus
+# ---------------------------------------------------------------------------
+
+msgid "Análises"
+msgstr "Análises"
+
+msgid "Histórico de Análises"
+msgstr "Histórico de Análises"
+
+msgid "Configuração"
+msgstr "Configuração"
+
+msgid "Definições da API"
+msgstr "Definições da API"
+
+# ---------------------------------------------------------------------------
+# Views — saft_report_views
+# ---------------------------------------------------------------------------
+
+msgid "Análises SAF-T"
+msgstr "Análises SAF-T"
+
+msgid "📄 Abrir Relatório HTML"
+msgstr "📄 Abrir Relatório HTML"
+
+msgid "➕ Nova Análise"
+msgstr "➕ Nova Análise"
+
+msgid "Identificação"
+msgstr "Identificação"
+
+msgid "Período e Processamento"
+msgstr "Período e Processamento"
+
+msgid "Duração de Processamento (ms)"
+msgstr "Duração de Processamento (ms)"
+
+msgid "📊 KPIs Executivos"
+msgstr "📊 KPIs Executivos"
+
+msgid "Faturação Total"
+msgstr "Faturação Total"
+
+msgid "Ticket Médio"
+msgstr "Ticket Médio"
+
+msgid "IVA Estimado"
+msgstr "IVA Estimado"
+
+msgid "Taxa Devoluções"
+msgstr "Taxa de Devoluções"
+
+msgid "Concentração Clientes"
+msgstr "Concentração de Clientes"
+
+msgid "Destaques"
+msgstr "Destaques"
+
+msgid "Produto com Maior Faturação"
+msgstr "Produto com Maior Faturação"
+
+msgid "Cliente com Maior Faturação"
+msgstr "Cliente com Maior Faturação"
+
+msgid "Faturação (€)"
+msgstr "Faturação (€)"
+
+msgid "Abrir Relatório HTML"
+msgstr "Abrir Relatório HTML"
+
+msgid "Ainda não há análises SAF-T."
+msgstr "Ainda não há análises SAF-T."
+
+msgid "Clique em <strong>Nova Análise</strong> para carregar o vosso ficheiro SAF-T."
+msgstr "Clique em <strong>Nova Análise</strong> para carregar o vosso ficheiro SAF-T."
+
+# ---------------------------------------------------------------------------
+# Views — saft_upload_wizard_views
+# ---------------------------------------------------------------------------
+
+msgid "Analisar SAF-T"
+msgstr "Analisar SAF-T"
+
+msgid "🕵️ Analisar Ficheiro SAF-T"
+msgstr "🕵️ Analisar Ficheiro SAF-T"
+
+msgid ""
+"Carregue o ficheiro SAF-T exportado do vosso software de contabilidade.\n"
+"                        O motor D&C irá processar e devolver KPIs e relatório completo."
+msgstr ""
+"Carregue o ficheiro SAF-T exportado do vosso software de contabilidade.\n"
+"                        O motor D&C irá processar e devolver KPIs e relatório completo."
+
+msgid "Tier de Análise"
+msgstr "Tier de Análise"
+
+msgid "Deixe em branco para usar o tier configurado na subscrição."
+msgstr "Deixe em branco para usar o tier configurado na subscrição."
+
+msgid "ℹ️ Nota de privacidade:"
+msgstr "ℹ️ Nota de privacidade:"
+
+msgid ""
+"O ficheiro é processado de forma segura nos servidores D&C.\n"
+"                        Não é guardada nenhuma cópia do ficheiro original."
+msgstr ""
+"O ficheiro é processado de forma segura nos servidores D&C.\n"
+"                        Não é guardada nenhuma cópia do ficheiro original."
+
+msgid "🚀 Analisar SAF-T"
+msgstr "🚀 Analisar SAF-T"
+
+msgid "Cancelar"
+msgstr "Cancelar"
+
+msgid "Nova Análise SAF-T"
+msgstr "Nova Análise SAF-T"
+
+# ---------------------------------------------------------------------------
+# Views — res_config_settings_views
+# ---------------------------------------------------------------------------
+
+msgid "Endereço do servidor de análise D&C."
+msgstr "Endereço do servidor de análise D&C."
+
+msgid "Identificador único da licença. Obtido no portal D&C."
+msgstr "Identificador único da licença. Obtido no portal D&C."
+
+msgid "Chave secreta da API. Não partilhe com terceiros."
+msgstr "Chave secreta da API. Não partilhe com terceiros."
+
+msgid "Nível de análise aplicado quando não é especificado no upload."
+msgstr "Nível de análise aplicado quando não é especificado no upload."
+
+msgid "🔌 Testar Ligação à API"
+msgstr "🔌 Testar Ligação à API"

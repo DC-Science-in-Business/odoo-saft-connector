@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_saft_upload_wizard_form" model="ir.ui.view">
+        <field name="name">saft.upload.wizard.form</field>
+        <field name="model">saft.upload.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Analisar SAF-T">
+                <sheet>
+                    <div class="oe_title">
+                        <h2>🕵️ Analisar Ficheiro SAF-T</h2>
+                        <p class="text-muted">
+                            Carregue o ficheiro SAF-T exportado do vosso software de contabilidade.
+                            O motor D&amp;C irá processar e devolver KPIs e relatório completo.
+                        </p>
+                    </div>
+
+                    <group>
+                        <field name="saft_file"
+                               widget="binary"
+                               filename="file_name"
+                               required="1"
+                               string="Ficheiro SAF-T (XML)"/>
+                        <field name="file_name" invisible="1"/>
+                        <field name="requested_tier"
+                               string="Tier de Análise"
+                               help="Deixe em branco para usar o tier configurado na subscrição."/>
+                    </group>
+
+                    <div class="alert mt8" role="alert" style="background:#fff8e1;border:1px solid #f6ad55;color:#7a4b00;">
+                        <strong>Premium (Tier 2):</strong> mantém foco em insights avançados com identidade dourada.
+                    </div>
+
+                    <div class="alert mt8" role="alert" style="background:linear-gradient(90deg,#0f172a,#1e293b);border:1px solid #334155;color:#f8fafc;">
+                        <strong>Enterprise (Tier 3):</strong> posicionamento executivo para reporting de direção e board.
+                    </div>
+
+                    <div class="alert alert-info mt8" role="alert">
+                        <strong>ℹ️ Nota de privacidade:</strong>
+                        O ficheiro é processado de forma segura nos servidores D&amp;C.
+                        Não é guardada nenhuma cópia do ficheiro original.
+                    </div>
+                </sheet>
+
+                <footer>
+                    <button name="action_analyse"
+                            type="object"
+                            string="🚀 Analisar SAF-T"
+                            class="btn-primary"
+                            data-hotkey="q"/>
+                    <button string="Cancelar" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action de abertura do wizard -->
+    <record id="action_saft_upload_wizard" model="ir.actions.act_window">
+        <field name="name">Nova Análise SAF-T</field>
+        <field name="res_model">saft.upload.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>
